@@ -8,6 +8,7 @@
 const kilometres = parseInt(prompt('inserisci il numero dei chilometri'))
 const age = parseInt(prompt('inserisci la tua età'))
 let price = kilometres * 0.21 ;
+let message;
 
 if(age < 18){
   price = price - (20 / 100 * price) 
@@ -15,4 +16,8 @@ if(age < 18){
   price = price - (40 / 100 * price) 
 } 
 
-document.getElementById('output').innerHTML = price
+price = price.toFixed(2);
+
+message = `Il prezzo del tuo biglietto è di: ${price}€`
+
+document.getElementById('output').innerHTML = message
