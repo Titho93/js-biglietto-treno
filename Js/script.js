@@ -9,6 +9,12 @@
 
 const kilometres = parseInt(prompt('inserisci il numero dei chilometri'))
 const age = parseInt(prompt('inserisci la tua età'))
-
 const price = kilometres * 0.21 ;
 
+if(age < 18){
+  price =  20 / 100 * price
+}else if(age > 65){
+  price =  40 / 100 * price 
+} 
+
+document.getElementById('output').innerHTML = price
